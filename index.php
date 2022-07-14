@@ -14,6 +14,86 @@ class Movie
     public $anno;
     public $immagine;
     public $testo;
+
+    /**
+     * Get the value of titolo
+     */ 
+    public function getTitolo()
+    {
+        return $this->titolo;
+    }
+
+    /**
+     * Set the value of titolo
+     *
+     * @return  self
+     */ 
+    public function setTitolo($titolo)
+    {
+        $this->titolo = $titolo;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of anno
+     */ 
+    public function getAnno()
+    {
+        return $this->anno;
+    }
+
+    /**
+     * Set the value of anno
+     *
+     * @return  self
+     */ 
+    public function setAnno($anno)
+    {
+        $this->anno = $anno;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of immagine
+     */ 
+    public function getImmagine()
+    {
+        return $this->immagine;
+    }
+
+    /**
+     * Set the value of immagine
+     *
+     * @return  self
+     */ 
+    public function setImmagine($immagine)
+    {
+        $this->immagine = $immagine;
+
+        return $this;
+    }
+
+    /**
+     * Get the value of testo
+     */ 
+    public function getTesto()
+    {
+        return $this->testo;
+    }
+
+    /**
+     * Set the value of testo
+     *
+     * @return  self
+     */ 
+    public function setTesto($testo)
+    {
+        $this->testo = $testo;
+
+        return $this;
+    }
 }
 
 
@@ -25,6 +105,8 @@ $movie1->testo = "Ritorno al Futuro è un film di genere avventura, commedia, fa
 diretto da Robert Zemeckis, con Michael J. Fox e Christopher Lloyd. Uscita al cinema il 18 ottobre 1985.
 Durata 116 minuti. Distribuito da Uip (1985), Cic Video Laserdisc, RCS Film & TV, Philips Video Classics,
 Dvd Universal (2002).";
+
+var_dump($movie1);
 
 
 $movie2 = new Movie();
