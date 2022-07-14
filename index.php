@@ -15,9 +15,14 @@ class Movie
     public $immagine;
     public $testo;
 
+    public function getFullMovie(){
+        return $this->titolo . " " . $this->anno . " " . $this->immagine . " " . $this->testo; 
+    }
+    
+
     /**
      * Get the value of titolo
-     */ 
+     */
     public function getTitolo()
     {
         return $this->titolo;
@@ -27,7 +32,7 @@ class Movie
      * Set the value of titolo
      *
      * @return  self
-     */ 
+     */
     public function setTitolo($titolo)
     {
         $this->titolo = $titolo;
@@ -37,7 +42,7 @@ class Movie
 
     /**
      * Get the value of anno
-     */ 
+     */
     public function getAnno()
     {
         return $this->anno;
@@ -47,7 +52,7 @@ class Movie
      * Set the value of anno
      *
      * @return  self
-     */ 
+     */
     public function setAnno($anno)
     {
         $this->anno = $anno;
@@ -57,7 +62,7 @@ class Movie
 
     /**
      * Get the value of immagine
-     */ 
+     */
     public function getImmagine()
     {
         return $this->immagine;
@@ -67,7 +72,7 @@ class Movie
      * Set the value of immagine
      *
      * @return  self
-     */ 
+     */
     public function setImmagine($immagine)
     {
         $this->immagine = $immagine;
@@ -77,7 +82,7 @@ class Movie
 
     /**
      * Get the value of testo
-     */ 
+     */
     public function getTesto()
     {
         return $this->testo;
@@ -87,7 +92,7 @@ class Movie
      * Set the value of testo
      *
      * @return  self
-     */ 
+     */
     public function setTesto($testo)
     {
         $this->testo = $testo;
@@ -95,6 +100,7 @@ class Movie
         return $this;
     }
 }
+
 
 
 $movie1 = new Movie();
@@ -109,6 +115,7 @@ Dvd Universal (2002).";
 var_dump($movie1);
 
 
+
 $movie2 = new Movie();
 $movie2->titolo = "L'odio";
 $movie2->anno = "1995";
@@ -117,3 +124,6 @@ $movie2->testo = "L'odio è un film di genere drammatico del 1995, diretto da Ma
 Cassel e Saïd Taghmaoui. Durata 95 minuti. Distribuito da Mikado Film - Mondatori Video, L'unità Video.";
 
 var_dump($movie2);
+
+echo $movie1->getFullMovie();
+echo $movie2->getFullMovie()
